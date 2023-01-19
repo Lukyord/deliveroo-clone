@@ -1,7 +1,8 @@
 import { useNavigation } from "@react-navigation/core";
 import React, { useLayoutEffect } from "react";
-import { Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import Header from "./components/Header";
+import SearchBar from "./components/SearchBar";
 
 export default function HomeScreen() {
   const navigation = useNavigation();
@@ -13,8 +14,9 @@ export default function HomeScreen() {
   }, []);
 
   return (
-    <SafeAreaView>
-      <Text className="text-red-500">Home Screen</Text>
+    <SafeAreaView className="bg-white pt-2">
+      <Header />
+      <SearchBar />
     </SafeAreaView>
   );
 }
