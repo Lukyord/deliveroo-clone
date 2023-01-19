@@ -7,7 +7,7 @@ import {
 
 export default function SearchBar() {
   return (
-    <View className="flex-row items-center pb-2 mx-3 space-x-2">
+    <View className="flex-row items-center pb-3 mx-3 space-x-2">
       <View className="flex-row flex-1 space-x-2 bg-gray-200 p-3 rounded-xl">
         <MagnifyingGlassIcon size={20} color="gray" />
         <TextInput

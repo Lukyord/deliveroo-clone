@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, Image, TextInput } from "react-native";
+import { Text, View, Image } from "react-native";
 import { UserIcon, ChevronDownIcon } from "react-native-heroicons/solid";
 
 export default function Header() {
