@@ -32,6 +32,30 @@ export default function FeaturedCarousel({ title, description, id }) {
           long={3}
           lat={9}
         />
+        <RestaurantCard
+          id="1"
+          imgUrl="https://links.papareact.com/gn7"
+          title="Sumo Sushi!"
+          rating="4.5"
+          genre="Japanese"
+          address="123 Main st."
+          shortDescription="This is OISHII!!"
+          dishes={[]}
+          long={3}
+          lat={9}
+        />
+        <RestaurantCard
+          id="1"
+          imgUrl="https://links.papareact.com/gn7"
+          title="Sumo Sushi!"
+          rating="4.5"
+          genre="Japanese"
+          address="123 Main st."
+          shortDescription="This is OISHII!!"
+          dishes={[]}
+          long={3}
+          lat={9}
+        />
       </ScrollView>
     </View>
   );

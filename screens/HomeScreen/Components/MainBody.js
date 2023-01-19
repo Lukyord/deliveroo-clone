@@ -5,9 +5,9 @@ import FeaturedRows from "./FeaturedRows";
 
 export default function MainBody() {
   return (
-    <View>
+    <ScrollView className="bg-gray-100">
       <Categories />
       <FeaturedRows />
-    </View>
+    </ScrollView>
   );
 }
