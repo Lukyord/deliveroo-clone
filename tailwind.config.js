@@ -4,7 +4,8 @@ module.exports = {
     "./App.{js,jsx,ts,tsx}",
     "./screens/**/*.{js,jsx,ts,tsx}",
     "./screens/HomeScreen/**/*.{js,jsx,ts,tsx}",
-    "./screens/HomeScreen/Components/**/*.{js,jsx,ts,tsx}",
+    "./screens/HomeScreen/components/**/*.{js,jsx,ts,tsx}",
+    "./screens/HomeScreen/components/features/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {},
