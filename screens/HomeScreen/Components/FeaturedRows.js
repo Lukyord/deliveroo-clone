@@ -17,13 +17,13 @@ export default function FeaturedRows() {
         type->{
           name
         }
-      }[0],
+      },
     }`
       )
       .then((data) => {
         setFeaturedCategories(data);
       });
-  }, []);
+  }, [id]);
 
   return (
     <View>

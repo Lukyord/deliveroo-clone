@@ -27,7 +27,7 @@ export default function FeaturedCarousel({ title, description, id }) {
       .then((data) => {
         setRestaurants(data?.restaurant);
       });
-  }, []);
+  }, [id]);
 
   return (
     <View>
