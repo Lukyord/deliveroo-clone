@@ -1,6 +1,7 @@
 import { TouchableOpacity, Text, Image, View } from "react-native";
 import React from "react";
 import { MapIcon, MapPinIcon, StarIcon } from "react-native-heroicons/solid";
+import { urlFor } from "../../../../sanity";
 
 export default function RestaurantCard({
   id,
@@ -18,7 +19,7 @@ export default function RestaurantCard({
     <TouchableOpacity className="bg-white mr-3 shadow-xl rounded-xl">
       <Image
         source={{
-          uri: imgUrl,
+          uri: urlFor(imgUrl).url(),
         }}
         className="h-36 w-64 rounded"
       />

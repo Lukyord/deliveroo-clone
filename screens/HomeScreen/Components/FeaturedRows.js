@@ -1,11 +1,42 @@
 import { View, Text } from "react-native";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FeaturedCarousel from "./features/FeaturedCarousel";
+import sanityClient from "../../../sanity";
 
 export default function FeaturedRows() {
+  const [featuredCategories, setFeaturedCategories] = useState([]);
+
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == 'featured'] {
+      ...,
+      restaurant[]->{
+        ...,
+        dish[]->,
+        type->{
+          name
+        }
+      }[0],
+    }`
+      )
+      .then((data) => {
+        setFeaturedCategories(data);
+      });
+  }, []);
+
   return (
     <View>
-      <FeaturedCarousel
+      {featuredCategories.map((category) => (
+        <FeaturedCarousel
+          key={category._id + Math.random().toString()}
+          id={category._id}
+          title={category.name}
+          description={category.short_description}
+        />
+      ))}
+
+      {/* <FeaturedCarousel
         title="Featured"
         description="Paid placement from out partners"
         id="1"
@@ -19,7 +50,7 @@ export default function FeaturedRows() {
         title="Offers near you !"
         description="Why not support your local restaurant tonight!"
         id="3"
-      />
+      /> */}
     </View>
   );
 }
