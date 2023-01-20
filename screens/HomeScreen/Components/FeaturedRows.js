@@ -13,7 +13,7 @@ export default function FeaturedRows() {
       ...,
       restaurant[]->{
         ...,
-        dish[]->,
+        dishes[]->,
         type->{
           name
         }
@@ -23,7 +23,7 @@ export default function FeaturedRows() {
       .then((data) => {
         setFeaturedCategories(data);
       });
-  }, [id]);
+  }, []);
 
   return (
     <View className="pb-4">

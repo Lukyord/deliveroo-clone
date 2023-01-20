@@ -15,7 +15,7 @@ export default function FeaturedCarousel({ title, description, id }) {
         ...,
         restaurant[]->{
           ...,
-          dish[]->,
+          dishes[]->,
           type->{
             name
           }
@@ -55,7 +55,7 @@ export default function FeaturedCarousel({ title, description, id }) {
             genre={restaurant.type?.name}
             address={restaurant.address}
             shortDescription={restaurant.short_description}
-            dishes={restaurant.dished}
+            dishes={restaurant.dishes}
             long={restaurant.long}
             lat={restaurant.lat}
           />
