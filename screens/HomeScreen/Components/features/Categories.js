@@ -6,13 +6,17 @@ import sanityClient, { urlFor } from "../../../../sanity";
 export default function Categories() {
   const [categories, setCategories] = useState([]);
 
-  useEffect(
-    () =>
-      sanityClient.fetch(`*[_type == 'category']`).then((data) => {
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `
+      *[_type == 'category']
+      `
+      )
+      .then((data) => {
         setCategories(data);
-      }),
-    []
-  );
+      });
+  }, []);
 
   return (
     <ScrollView

@@ -15,7 +15,7 @@ export default function HomeScreen() {
   }, []);
 
   return (
-    <SafeAreaView className="bg-white pt-2">
+    <SafeAreaView className="flex-1 bg-white pt-2">
       <Header />
       <SearchBar />
       <MainBody />

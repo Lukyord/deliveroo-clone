@@ -26,7 +26,7 @@ export default function FeaturedRows() {
   }, [id]);
 
   return (
-    <View>
+    <View className="pb-4">
       {featuredCategories.map((category) => (
         <FeaturedCarousel
           key={category._id + Math.random().toString()}
