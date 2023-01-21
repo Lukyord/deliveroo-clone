@@ -6,6 +6,7 @@ import MainImage from "./components/MainImage";
 import MainTitle from "./components/MainTitle";
 import HaveAllergy from "./components/HaveAllergy";
 import Menu from "./components/Menu";
+import BasketIcon from "../OverlayBasket/BasketIcon";
 
 export default function RestaurantScreen() {
   const navigation = useNavigation();
@@ -32,19 +33,22 @@ export default function RestaurantScreen() {
   });
 
   return (
-    <ScrollView>
-      <MainImage imgUrl={imgUrl} />
+    <>
+      <BasketIcon />
+      <ScrollView>
+        <MainImage imgUrl={imgUrl} />
 
-      <View className="bg-white">
-        <MainTitle
-          title={title}
-          address={address}
-          shortDescription={shortDescription}
-          genre={genre}
-        />
-        <HaveAllergy />
-      </View>
-      <Menu dishes={dishes} />
-    </ScrollView>
+        <View className="bg-white">
+          <MainTitle
+            title={title}
+            address={address}
+            shortDescription={shortDescription}
+            genre={genre}
+          />
+          <HaveAllergy />
+        </View>
+        <Menu dishes={dishes} />
+      </ScrollView>
+    </>
   );
 }
