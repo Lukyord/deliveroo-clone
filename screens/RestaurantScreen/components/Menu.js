@@ -4,7 +4,7 @@ import DishRow from "./features/DishRow";
 
 export default function Menu({ dishes }) {
   return (
-    <View>
+    <View className="pb-36">
       <Text className="pt-6 mb-3 font-bold text-xl">Menu</Text>
       {dishes.map((dish) => (
         <DishRow
