@@ -3,9 +3,11 @@ import React from "react";
 import Currency from "react-currency-formatter";
 import { useSelector } from "react-redux";
 import { selectBasketTotal } from "../../../features/basketSlice";
+import { useNavigation } from "@react-navigation/native";
 
 export default function TotalPrice() {
   const basketTotal = useSelector(selectBasketTotal);
+  const navigation = useNavigation();
 
   return (
     <View className="p-5 bg-white mt-5 space-y-4">
@@ -30,7 +32,10 @@ export default function TotalPrice() {
         </Text>
       </View>
 
-      <TouchableOpacity className="rounded-lg bg-[#00CCBB] p-4">
+      <TouchableOpacity
+        onPress={() => navigation.navigate("PreparingOrder")}
+        className="rounded-lg bg-[#00CCBB] p-4"
+      >
         <Text className="text-center text-white text-lg font-bold">
           Place Order
         </Text>
