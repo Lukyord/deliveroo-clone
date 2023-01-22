@@ -8,6 +8,7 @@
   
 ## Setting up the development environment
   https://reactnative.dev/docs/environment-setup
+  
   https://www.youtube.com/watch?v=oorfevovPWw&t=1213s
 
 ## Install all dependencies
